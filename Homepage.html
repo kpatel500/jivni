@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Jivni Hotel</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="Homepage.css">
+</head>
+
+
+
+<body>
+
+  <div id="headbar">
+    <img src="Logo3.jpg" class="logo">
+    <div id="Title">Jivni Hotel</div>
+
+
+    <!-- <a type="button" class="btn btn-dark" id="home">Home</a>
+           <a style="text-decoration:none"type="button" class="btn btn-dark" id="Gallery"href="Gallery.html">Gallery</a>
+           <a style="text-decoration:none"type="button" class="btn btn-dark" id="Aboutus" href="Aboutus.html">About us</a>
+           <a style="text-decoration:none"type="button" class="btn btn-dark" id="Contactus" href="Contactus.html">Contact us</a> -->
+    <a type="button" class="btn btn-dark" id="home" href="Homepage.html">Home</a>
+    <a type="button" class="btn btn-dark" id="Gallery" href="Gallery.html">Gallery</a>
+    <a type="button" class="btn btn-dark" id="Aboutus" href="Aboutus.html">About us</a>
+    <a type="button" class="btn btn-dark" id="Contactus" href="Contactus.html">Contact us</a>
+  </div>
+
+  <!-- Slide Show -->
+  <section>
+    <img class="mySlides" src="slide12.jpg" id="slide1">
+    <img class="mySlides" src="slide1.jpg" id="slide2">
+    <img class="mySlides" src="slide5.jpg" id="slide3">
+  </section>
+
+
+
+  <script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 1000);
+    }
+  </script>
+
+
+
+  <div id="headbar1">
+  </div>
+
+  <div class="container">
+
+    <div id="headbar2">
+
+      <div class="description-container">
+        <img src="slide10.jpg" id="slide10" class="img-responsive floating-image left">
+
+        <p id="info">Jivni Hotel also offers many facilities to enrich your stay in Goa. To name a few of the hotel's
+          facilities, there are 24-hour room service, free Wi-Fi in all rooms, facilities for disabled guests, Wi-Fi in
+          public areas, car park.
+        <p>
+
+        <p id="info">41 rooms spread over 3 floors provide a warm and pleasant home away from home. Modern comforts such
+          as television LCD/plasma screen, internet access – wireless (complimentary), air conditioning, desk, fan can
+          be found in selected rooms. The hotel offers fantastic facilities, including outdoor pool, pool (kids),
+          garden, to help you unwind after an action-packed day in the city. Enjoy unparalleled services and a truly
+          prestigious address at the Jivni Hotel.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="headbar3">
+  </div>
+
+  <div id="headbar4">
+
+
+    <h1 id="customer">Customer Review:</h1>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+    <input type="submit" value="Submit">
+
+  </div>
+
+
+
+
+  <footer>
+
+    <a href="#">Develop By:- Krishi patel<br>
+      <a href="mailto:krishipatel500@gmail.com">krishipatel500@gmail.com</a>
+    </a>
+
+    <h2>Social Links</h2>
+
+    <!-- Add font awesome icons -->
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-instagram"></a>
+
+
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(() => {
+      $(".logo").fadeIn(3000);
+
+      $("#info").fadeOut(1500);
+
+      $(".logo").fadeToggle(3000);
+
+      $(".btn").each(() => {
+        alert("Hi! welcome my home page");
+      })
+
+      $("[attribute=value]").click(() => {
+        alert("Hiii");
+      })
+
+      $("button[value|='submit']").dblclick(() => {
+        alert("Hiii");
+      })
+      $("p").mouseenter(function () {
+        $("p").css("background-color", "grey");
+      });
+      $("p").mouseleave(function () {
+        $("p").css("background-color", "#DCDCDC");
+      });
+
+      
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>
